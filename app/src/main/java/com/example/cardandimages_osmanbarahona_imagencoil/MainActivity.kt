@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
             CardAndImages_OsmanBarahona_ImagenCoilTheme {
                 CardAndImages_OsmanBarahona_ImagenCoilTheme {
                     Scaffold(
-                        topBar = { InstagramStyleTopAppBar() },
+                        topBar = { TopAppBarInsta() },
                         content = { paddingValues ->
                             Surface(
                                 modifier = Modifier
@@ -70,8 +70,8 @@ class MainActivity : ComponentActivity() {
                                 color = MaterialTheme.colorScheme.background
                             ) {
                                 LazyColumn {
-                                    item { Cardinstagram1(username = "Real Madrid CF", "https://1000marcas.net/wp-content/uploads/2020/01/logo-Real-Madrid-500x333.png", "https://img.europapress.es/fotoweb/fotonoticia_20241022230035_690.jpg") }
-                                    item { Cardinstagram2(username = "Barcelona", "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png", "https://cdn.vox-cdn.com/thumbor/NWe8y5vYnOT8cKTbwp7RjXs6FQA=/0x0:4756x3171/1200x800/filters:focal(1909x42:2669x802)/cdn.vox-cdn.com/uploads/chorus_image/image/73713511/2183417096.0.jpg") }
+                                    item { InstaCard1(username = "Real Madrid CF", "https://1000marcas.net/wp-content/uploads/2020/01/logo-Real-Madrid-500x333.png", "https://img.europapress.es/fotoweb/fotonoticia_20241022230035_690.jpg") }
+                                    item { InstaCard2(username = "Barcelona", "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png", "https://cdn.vox-cdn.com/thumbor/NWe8y5vYnOT8cKTbwp7RjXs6FQA=/0x0:4756x3171/1200x800/filters:focal(1909x42:2669x802)/cdn.vox-cdn.com/uploads/chorus_image/image/73713511/2183417096.0.jpg") }
 
                                 }
                             }
@@ -84,7 +84,7 @@ class MainActivity : ComponentActivity() {
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun InstagramStyleTopAppBar() {
+    fun TopAppBarInsta() {
         TopAppBar(
             title = {
                 Row(
@@ -132,7 +132,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun Cardinstagram1(username: String, imageUrl1: String, imageUrl2: String ,modifier: Modifier = Modifier) {
+    fun InstaCard1(username: String, imageUrl1: String, imageUrl2: String ,modifier: Modifier = Modifier) {
         Card(
             modifier = modifier
                 .fillMaxWidth()
@@ -243,7 +243,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Cardinstagram2(username: String, imageUrl1: String, imageUrl2: String ,modifier: Modifier = Modifier) {
+fun InstaCard2(username: String, imageUrl1: String, imageUrl2: String ,modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .fillMaxWidth()
